@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>데모버전의 미발매 공항 클럽 모음, 스팀 출시 3 일 만에 사라진 이유</title>
+  <link rel="canonical" href="https://cosmos0111-cmyk.github.io/bp-t3b08-gh-club-list/posts/guide-001-fiqcql.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>데모버전의 미발매 공항 클럽 모음, 스팀 출시 3 일 만에 사라진 이유</h1>
+    <article>
+      <p>아, 진짜... 그 좁은 통로와 적 배치의 차이는 파일 구조를 뜯어봐야 해. 브로드가 처음엔 "데모판이 더 낫다"고 생각할지라도, 실제 메모리 덱스트를 보면 출시본의 수정 흔적이 명확하다. 내가 당시 에뮬레이터 설정을 잘못 걸어 3 일 만에 판매 중단된 버전을 발견한 건 그 때문이다.</p>
+<p>## 버전 간 데이터 비교 기준</p>
+<p>우선 `0.1.0` 데모와 `0.9.12` 최종 빌드를 대조해야 해. 특정 구역의 `enm_placement.dat` 파일을 추출해볼 때, 적 생성 좌표가 3% 이상 벗어나면 버그일 수 있다. 특히 초기 테스트용 맵은 `airport_hub_04` 폴더에 숨어있던 건데, 이게 바로 우리가 말하는 **공항 클럽 모음**과 같은 개념이라 생각하면 오산하지. 개발자가 내부적으로 붙인 임시 명칭을 그대로 따라가는 건 무모한 시도니까.</p>
+<p><IMAGE placement="hero" alt="다크 소울 1 데모 버전과 출시본의 맵 구조 비교"><br>dark souls 1, demo version:(1.3), map structure comparison, level design, retro emulation, game development history, hidden content, enemy placement, dark souls 1 boss, firelink shrine, undead burg, file explorer, binary code, source engine</p>
+<p>## 실패 방지와 관찰 포인트</p>
+<p>단순히 그래픽만 보면 안 된다. 패치 노트를 무시한 채 에뮬레이터로 돌릴 경우 프레임 드롭이 발생하곤 한다. 60FPS 설정을 유지하려면 `config.ini` 파일의 `render_distance` 값을 256 단위로 조정해야 해. 내가 겪은 실수 중 하나는 데모판의 아트워크를 출시본에 적용해서 비교한 건데, 텍스트 렌더링 엔진 버전이 달라서 글자가 깨지기도 한다. 특히 `font_size` 파라미터가 고정되어 있지 않은 경우야, 사용자가 키보드를 누르는 빈도까지 영향을 받을 수 있다.</p>
+<p>## 결론</p>
+<p>결국 그 미완성 구역은 성능 최적화 실패로 인해 제거됐을 가능성이 높다. 처음 봤던 장면이 실제 게임에서 어떻게 재구성되었는지 다시 생각해보면, 개발자의 절박한 선택이 드러난다. **공항 클럽 모음** 같은 희귀 데이터를 찾기 위해 에뮬레이터 설정까지 맞춰야 하지만, 그만큼 그 가치와 차이가 명확해지니까. 다음번에 실패하면 다시 이 로그를 참고하는 게 좋겠지.</p>
+    </article>
+  </main>
+</body>
+</html>
