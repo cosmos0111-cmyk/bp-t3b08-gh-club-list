@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공항 클럽 블로그 | 에디토리얼 라운지 스토리</title>
+    <meta name="description" content="공항에서 즐기는 최고의 클럽과 라운지 경험에 대한 에디토리얼한 이야기. 첫 방문자를 위한 꿀팁과 숨은 공간 소개.">
+    <meta name="keywords" content="공항 클럽, 공항 라운지, 프리미엄 라운지, VIP 클럽, 공항 바, 라운지 모음, 여행자 클럽, 블로그">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-ivory-ink">
+    <link rel="canonical" href="https://t3b08-gh-club-list.vercel.app/blog">
+    <meta property="og:title" content="공항 클럽 블로그 | 에디토리얼 럭셔리 라운지 스토리">
+    <meta property="og:description" content="공항에서 즐기는 최고의 클럽과 라운지 경험에 대한 이야기. 꿀팁과 숨은 스팟까지.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-gh-club-list.vercel.app/blog">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            background-color: #faf8f5;
+            color: #1a1a1a;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 {
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.2rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin: 2.5rem 0 1rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+            color: #2c2c2c;
+        }
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid #d4c9b8;
+            transition: border-color 0.3s ease;
+        }
+        a:hover {
+            border-bottom-color: #1a1a1a;
+        }
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 3.5rem;
+            font-weight: 600;
+            line-height: 0.85;
+            margin-right: 0.4rem;
+            color: #8b7a62;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            padding: 3rem 0;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(250, 248, 245, 0.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 1rem 1.5rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e8e1d6;
+        }
+        nav .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            border-bottom: none;
+        }
+        nav .logo:hover {
+            border-bottom: none;
+            opacity: 0.7;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        nav ul li a {
+            font-size: 0.95rem;
+            font-weight: 400;
+            border-bottom: none;
+            color: #4a4a4a;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #1a1a1a;
+            border-bottom: none;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #1a1a1a;
+            transition: all 0.3s;
+        }
+        .hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            background: linear-gradient(to bottom, #f0ebe3, #faf8f5);
+        }
+        .hero .container {
+            max-width: 640px;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #5a5a5a;
+        }
+        .blog-post {
+            padding-top: 1rem;
+        }
+        .blog-post .meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: #8a8a8a;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .blog-post .meta span {
+            border-bottom: none;
+        }
+        .blog-post blockquote {
+            border-left: 3px solid #d4c9b8;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #4a4a4a;
+            font-size: 1.1rem;
+        }
+        .blog-post .highlight-card {
+            background: #f0ebe3;
+            border-radius: 12px;
+            padding: 1.8rem;
+            margin: 2rem 0;
+        }
+        .blog-post .highlight-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: #8b7a62;
+        }
+        .blog-post .highlight-card p {
+            font-size: 0.98rem;
+            margin-bottom: 0.5rem;
+        }
+        .blog-post .image-placeholder {
+            width: 100%;
+            height: 280px;
+            background: #e8e1d6;
+            border-radius: 12px;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8a8a8a;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+        }
+        .blog-post .tips-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .blog-post .tips-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #ede7de;
+            display: flex;
+            gap: 0.8rem;
+            align-items: baseline;
+        }
+        .blog-post .tips-list li::before {
+            content: "›";
+            color: #8b7a62;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+        .faq-section {
+            background: #f5f1eb;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+        }
+        .faq-section h3 {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+        .faq-item {
+            margin-bottom: 1.2rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #e0d9ce;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .faq-item h4 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            cursor: pointer;
+        }
+        .faq-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: #5a5a5a;
+        }
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            border-top: 1px solid #e8e1d6;
+            color: #8a8a8a;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: rgba(250, 248, 245, 0.98);
+                backdrop-filter: blur(16px);
+                padding: 1.5rem;
+                gap: 1.2rem;
+                border-bottom: 1px solid #e8e1d6;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            .faq-section {
+                padding: 1.5rem;
+            }
+            .hero {
+                padding: 6rem 0 2rem;
+            }
+            .blog-post .image-placeholder {
+                height: 180px;
+            }
+            .blog-post .highlight-card {
+                padding: 1.2rem;
+            }
+        }
+        .tel-link {
+            border-bottom: none;
+            color: #1a1a1a;
+        }
+        .tel-link:hover {
+            border-bottom: none;
+            opacity: 0.7;
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <nav>
+        <a href="/" class="logo">공항클럽</a>
+        <div class="hamburger-menu" onclick="document.querySelector('nav ul').classList.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href="/">홈</a></li>
+            <li><a href="/list">클럽 모음</a></li>
+            <li><a href="/blog">블로그</a></li>
+            <li><a href="/about">소개</a></li>
+            <li><a href="tel:+82234567890" class="tel-link">문의</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>공항 클럽,<br>처음 가는 너를 위한 가이드</h1>
+            <p>처음엔 쫄았는데, 지금은 내 인생 최고의 공항 루틴이 된 이야기</p>
+        </div>
+    </section>
+
+    <section class="blog-post">
+        <div class="container">
+            <div class="meta">
+                <span>2025.03.21</span>
+                <span>·</span>
+                <span>5분 읽기</span>
+                <span>·</span>
+                <span>여행 꿀팁</span>
+            </div>
+
+            <p class="drop-cap">솔직히 말하면, 나도 처음엔 공항 라운지라는 게 좀 부담스러웠어. "나는 비즈니스맨도 아니고, VIP도 아닌데… 거길 왜 가?" 그런 생각이 먼저 들더라고. 근데 어느 날, 6시간 환승이 걸린 여행을 하게 되면서 인생이 좀 바뀌었지. 지루함에 미칠 것 같아서, 반신반의하며 찾아간 라운지에서 처음으로 제대로 된 에스프레소 한 잔과 따뜻한 샤워를 경험했어. 그 순간부터 내 여행의 공식이 바뀌었어.</p>
+
+            <p>공항 클럽은 더 이상 특권층만의 공간이 아니야. 생각보다 접근도 쉽고, 가격도 부담스럽지 않은 곳이 많아. 오히려 공항 내에서 가장 가성비 좋은 장소 중 하나라고 말하고 싶어. 특히 환승이 길거나, 비행기 출발이 지연됐을 때 그 진가를 제대로 느낄 수 있지.</p>
+
+            <div class="image-placeholder">
+                <span>라운지 내부에서 바라본 활주로 뷰</span>
+            </div>
+
+            <h2>처음이라면, 이렇게 시작해봐</h2>
+            <p>내 첫 라운지는 인천공항의 스카이허브 라운지였어. 입구에서 잠시 망설였는데, 직원분이 친절하게 안내해주더라고. 놀라웠던 건, 생각보다 많은 사람들이 각자 자기만의 시간을 보내고 있더라는 거야. 어떤 사람은 노트북으로 일하고, 어떤 사람은 와인 한 잔 하면서 창밖을 바라보고. 모두 평범한 여행자였어.</p>
+
+            <div class="highlight-card">
+                <h4>✈️ 첫 방문자를 위한 꿀팁</h4>
+                <p>온라인으로 사전 예약하면 최대 30% 할인받을 수 있어. 특히 오전 10시 이전에는 한산해서 여유롭게 즐기기 좋아. 그리고 꼭 창가 자리를 노려봐 — 비행기 보는 재미가 쏠쏠하거든.</p>
+            </div>
+
+            <h3>내가 찾은 숨은 스팟 5</h3>
+            <p>자주 가는 공항마다 내가 발굴한 시크릿 스팟들이 생겼어. 사람들 많이 모이는 메인 라운지 말고, 살짝 외진 곳에 위치한 작은 클럽들이 오히려 더 감성적이더라고. 특히 일본 하네다 공항의 작은 위스키 바는 내 인생 최고의 공간 중 하나야. 바텐더가 내 취향을 물어보고 딱 맞는 한 잔을 추천해줬을 때의 그 느낌, 진짜 잊을 수가 없어.</p>
+
+            <ul class="tips-list">
+                <li>인천공항 제2터미널 동편 — 한산하고 조용해, 업무하기 최적</li>
+                <li>나리타 공항 제1터미널 4층 — 일본 위스키 바가 숨겨져 있어</li>
+                <li>창이 공항 터미널 3 — 24시간 오픈, 야간 환승객 성지</li>
+                <li>하네다 공항 국제선 3층 — 창가 자리에서 후지산 뷰 (맑은 날만)</li>
+                <li>김포공항 국내선 — 의외로 아늑, 커피 퀄리티가 좋아</li>
+            </ul>
+
+            <h2>이런 건 좀 알았으면 좋겠어</h2>
+            <p>처음 가면 뭘 해야 할지 막막할 수 있어. 내 경험을 바탕으로 몇 가지 팁을 줄게. 첫째, 입장할 때 항상 여권과 탑승권을 보여줘야 해. 둘째, 샤워 시설을 꼭 이용해봐 — 긴 비행 전후로 진짜 신세계야. 셋째, 음식은 소량씩 여러 번 가서 먹는 걸 추천해. 뷔페처럼 나오는 곳이 많으니까 한 번에 너무 많이 담지 말고, 천천히 즐겨봐.</p>
+
+            <blockquote>
+                "라운지에 처음 들어갔을 때, '아, 이게 여유구나' 싶었어. 그냥 앉아서 커피 마시고, 비행기 뜨고 내리는 걸 구경하는데 시간이 어떻게 가는지 몰랐지."
+            </blockquote>
+
+            <p>사실 공항 클럽의 진짜 가치는 그 공간이 주는 '멈춤'에 있는 것 같아. 공항은 원래 바쁘고 정신없는 곳이잖아. 그런데 그 안에서 잠시 멈춰서, 아무것도 안 해도 되는 시간을 갖는 게 생각보다 큰 사치야. 특히 요즘처럼 모든 게 빠르게 돌아가는 세상에, 그런 시간은 정말 소중해.</p>
+
+            <div class="faq-section">
+                <h3>자주 묻는 질문</h3>
+                <div class="faq-item">
+                    <h4>일반인도 공항 클럽을 이용할 수 있나요?</h4
+</body>
+</html>

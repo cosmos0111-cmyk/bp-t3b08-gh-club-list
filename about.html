@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공항 클럽 모음 | 정보 · 라운지 꿀팁 가이드</title>
+    <meta name="description" content="공항 클럽 모음에 관한 모든 정보. 입장 조건, 운영 시간, 꿀팁까지. VIP 라운지부터 히든 스팟까지 진짜 정보만 모았어요.">
+    <meta name="keywords" content="공항 클럽 모음, 공항 라운지 정보, 라운지 입장 조건, 공항 VIP 클럽, 라운지 꿀팁, 공항 클럽 추천">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-ivory-ink">
+    <link rel="canonical" href="https://t3b08-gh-club-list.vercel.app/info">
+    
+    <!-- OG 메타 -->
+    <meta property="og:title" content="공항 클럽 모음 | 진짜 정보만 담은 라운지 가이드">
+    <meta property="og:description" content="공항에서 즐기는 최고의 클럽과 라운지 경험. 입장부터 꿀팁까지, 엄선된 정보 모음">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://t3b08-gh-club-list.vercel.app/info">
+    <meta property="og:image" content="https://t3b08-gh-club-list.vercel.app/og-info.jpg">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="공항 클럽 모음 | 정보 가이드">
+    <meta name="twitter:description" content="공항 라운지 입장부터 꿀팁까지, 진짜 정보만 모았어요">
+    
+    <style>
+        /* Reset & Base */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'Segoe UI', sans-serif;
+            background-color: #faf8f5;
+            color: #1a1a1a;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            padding-top: 2rem;
+        }
+        h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        a {
+            color: #1a1a1a;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.15);
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #1a1a1a;
+        }
+        
+        /* Drop Cap */
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 3.5rem;
+            line-height: 0.8;
+            font-weight: 700;
+            margin-right: 0.5rem;
+            color: #1a1a1a;
+        }
+        
+        /* Layout Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Space System */
+        section {
+            padding: 4rem 0;
+        }
+        
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .nav-logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-bottom: none;
+            transition: opacity 0.2s;
+        }
+        .nav-links a:hover {
+            opacity: 0.6;
+            border-bottom: none;
+        }
+        .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+            background: none;
+            border: none;
+        }
+        .hamburger-menu span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #1a1a1a;
+            transition: all 0.3s;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .hero .subhead {
+            font-size: 1rem;
+            color: #888;
+            margin-top: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        .card h3 {
+            margin-bottom: 0.5rem;
+        }
+        .card .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #888;
+            margin-bottom: 0.75rem;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+        
+        /* FAQ */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            border-bottom: 1px solid #e5e2dd;
+            padding: 1.5rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        /* Intro Section */
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        /* Tel link */
+        .tel-link {
+            font-weight: 600;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.2);
+        }
+        .tel-link:hover {
+            border-bottom-color: #1a1a1a;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 0;
+            text-align: center;
+            color: #888;
+            font-size: 0.85rem;
+            border-top: 1px solid #e5e2dd;
+            margin-top: 2rem;
+        }
+        
+        /* Responsive 768 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 0 1.25rem;
+            }
+            section {
+                padding: 2.5rem 0;
+            }
+            .hero {
+                padding: 4rem 0 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #faf8f5;
+                flex-direction: column;
+                padding: 1rem 2rem;
+                gap: 1rem;
+                border-bottom: 1px solid #e5e2dd;
+                z-index: 100;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger-menu {
+                display: flex;
+            }
+            .intro-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">공항 클럽 모음</div>
+        <button class="hamburger-menu" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('active')">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/">홈</a></li>
+            <li><a href="/info">정보</a></li>
+            <li><a href="/clubs">클럽</a></li>
+            <li><a href="/guide">가이드</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <p class="subhead">Airport Club Info</p>
+            <h1>공항 클럽,<br>진짜 정보만 모았어</h1>
+            <p class="drop-cap">솔직히 말해서, 공항 클럽 모음 찾아보면 정보가 너무 많잖아? 근데 막상 내가 필요한 건 뭘까? 입장은 어떻게 하고, 얼마나 있어야 본전이고, 어떤 라운지가 진짜 괜찮은지. 내가 직접 경험하고 주변 여행자들에게 들은 꿀팁들만 모아봤어. 너한테 딱 맞는 공항 클럽 정보, 지금부터 알려줄게.</p>
+        </div>
+    </section>
+
+    <!-- Main Content: Info Cards -->
+    <section>
+        <div class="container">
+            <h2>알면 알수록 쓸모 있는 공항 클럽 정보</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <span class="tag">입장 조건</span>
+                    <h3>누구나 들어갈 수 있을까?</h3>
+                    <p>대부분의 공항 클럽은 비즈니스/퍼스트 클래스 티켓 소지자, 특정 신용카드 회원, 또는 멤버십 가입자에게 열려 있어. 근데 요즘은 PP카드나 라운지키 같은 서비스로 일반 여행자도 충분히 즐길 수 있어. 내 경험상, PP카드 하나면 인천부터 나리타까지 커버 가능하더라.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">운영 시간</span>
+                    <h3>새벽에도 열려?</h3>
+                    <p>공항 클럽 운영 시간은 천차만별이야. 주요 허브 공항의 라운지는 보통 오전 6시부터 밤 10시까지 운영하는데, 간혹 24시간 오픈하는 곳도 있어. 인천공항의 경우 스카이허브 라운지가 24시간 운영해서 새벽 출발에도 완전 좋아. 다만, 새벽엔 음식이 좀 제한적일 수 있다는 건 감안해야 해.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">꿀팁</span>
+                    <h3>본전 뽑는 스마트한 이용법</h3>
+                    <p>솔직히 공항 클럽에서 제일 중요한 건 음식이랑 샤워 시설이야. 비행기 타기 전에 따뜻한 샤워하고, 간단하게 한 끼 해결하면 공항 밥값 아끼는 건 물론이고 피로도 확 풀려. 내 루틴은 도착하자마자 샤워부터 하고, 그다음에 맥주 한잔하면서 충전하는 거. 완전 강추야.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">히든 스팟</span>
+                    <h3>사람 없는 라운지 찾는 법</h3>
+                    <p>대형 공항의 메인 라운지는 항상 북적이기 마련이야. 근데 터미널 끝자락이나 환승 구역에 위치한 작은 라운지들은 의외로 한적하고 조용해. 예를 들어, 싱가포르 창이공항의 T3 환승 라운지는 사람도 적고 뷰도 끝내줘. 내가 발견한 히든 스팟인데, 여기서 시간 보내면 진짜 힐링된다.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">비용</span>
+                    <h3>돈 아끼는 멤버십 전략</h3>
+                    <p>연간 멤버십이 부담스럽다면, 일일 이용권을 고려해봐. 보통 30~50달러 정도면 하루 종일 라운지를 쓸 수 있어. 그리고 신용카드 혜택을 잘 활용하면 무료로 입장 가능한 경우도 많아. 내가 쓰는 카드는 연회비 대비 라운지 혜택이 엄청나서, 1년에 3번만 가도 본전 뽑아.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">매너</span>
+                    <h3>라운지에서 하면 안 되는 것</h3>
+                    <p>라운지는 공유 공간이라는 걸 꼭 기억해야 해. 너무 큰 소리로 통화하거나, 자리 오래 차지하는 건 별로야. 그리고 음식은 적당히 가져와. 나도 예전에 너무 많이 퍼와서 좀 민망했던 적이 있어. 서로 배려하면 모두가 편하게 즐길 수 있으니까, 기본적인 에티켓만 지키자.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <div class="container">
+            <h2>자주 묻는 질문</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">공항 클럽 모음에 나오는 라운지는 모두 유료인가요? <span>▼</span></div>
+                    <div class="faq-answer">꼭 그렇진 않아. 많은 라운지가 신용카드 혜택이나 제휴 프로그램을 통해 무료로 입장 가능해. 예를 들어, 특정 프리미엄 카드를 소지하면 연간 몇 회 무료로 이용할 수 있는 경우가 많아. 공항 클럽 모음 사이트에서 각 라운지의 입장 조건을 꼭 확인해봐.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">환승 시간이 2시간인데 라운지 갈 시간이 될까요?<span>▼</span></div>
+                    <div class="faq-answer">충분히 가능해! 보통 라운지는 출발 게이트 근처에 있어서 접근성이 좋아. 2시간이면 30분 정도 라운지에서 쉬면서 간단히 먹고 마실 수 있어. 다만, 보안 수속이나 게이트 이동 시간을 고려해서 최소 1시간 전에는 나오는 게 좋아. 내 경험상 2시간 환승이면 라운지에서 맥주 한잔하고 샤워도 가능하더라.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">아이와 함께 라운지를
+</body>
+</html>
