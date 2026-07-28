@@ -2,389 +2,241 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <title>공항 클럽 모음 — 정보 | 공항 내 비즈니스 휴게 공간과 클럽을 방문하기 전 확인해야 할 조건별 선택 기준</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공항 클럽 모음 | 정보 · 라운지 꿀팁 가이드</title>
-    <meta name="description" content="공항 클럽 모음에 관한 모든 정보. 입장 조건, 운영 시간, 꿀팁까지. VIP 라운지부터 히든 스팟까지 진짜 정보만 모았어요.">
-    <meta name="keywords" content="공항 클럽 모음, 공항 라운지 정보, 라운지 입장 조건, 공항 VIP 클럽, 라운지 꿀팁, 공항 클럽 추천">
     <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-ivory-ink">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+    <meta name="description" content="공항 내 비즈니스 휴게 공간과 클럽을 방문하기 전 확인해야 할 조건별 선택 기준, 이용 전 체크리스트 및 상황별 적합성 분석.">
+    <meta name="keywords" content="공항 클럽 모음, 공항 휴게공간, 출장객 휴게소, 공항 바, 공항 정보">
     <link rel="canonical" href="https://airport-review-zone.mapo-room-guide.xyz/about.html">
     
-    <!-- OG 메타 -->
-    <meta property="og:title" content="공항 클럽 모음 | 진짜 정보만 담은 라운지 가이드">
-    <meta property="og:description" content="공항에서 즐기는 최고의 클럽과 라운지 경험. 입장부터 꿀팁까지, 엄선된 정보 모음">
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://airport-review-zone.mapo-room-guide.xyz/about.html">
-    <meta property="og:image" content="https://t3b08-gh-club-list.vercel.app/og-info.jpg">
-    <meta property="og:locale" content="ko_KR">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="공항 클럽 모음 | 정보 가이드">
-    <meta name="twitter:description" content="공항 라운지 입장부터 꿀팁까지, 진짜 정보만 모았어요">
-    
+    <meta property="og:title" content="공항 클럽 모음 — 정보">
+    <meta property="og:description" content="공항 내 비즈니스 휴게 공간과 클럽을 방문하기 전 확인해야 할 조건별 선택 기준, 이용 전 체크리스트 및 상황별 적합성 분석.">
+
+    <!-- CSS Core: Mono-Chrome Brutalist v4 -->
     <style>
-        /* Reset & Base */
+        :root {
+            --bg-body: #f0f0f0;
+            --bg-sidebar: #ffffff;
+            --text-main: #1a1a1a;
+            --text-secondary: #555555;
+            --accent-chrome: #e8e8e8;
+            --border-strong: #dcdcdc;
+            --font-stack: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            --mono-stack: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --spacing-unit: 1rem;
+            --container-width: 1400px;
+            --sidebar-width: 320px;
+        }
+
         *, *::before, *::after {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-        html {
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
             font-size: 16px;
-            scroll-behavior: smooth;
             -webkit-font-smoothing: antialiased;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'Segoe UI', sans-serif;
-            background-color: #faf8f5;
-            color: #1a1a1a;
-            line-height: 1.6;
-            overflow-x: hidden;
+
+        /* Layout Grid */
+        .app-grid {
+            display: grid;
+            grid-template-columns: var(--sidebar-width) 1fr;
+            min-height: 100vh;
+            border-top: 1px solid var(--border-strong);
         }
-        
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
+
+        /* Navigation (Sticky Sidebar) */
+        .nav-sidebar {
+            background-color: var(--bg-sidebar);
+            border-right: 1px solid var(--border-strong);
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            padding: 2rem 1.5rem;
         }
-        h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-        }
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            padding-top: 2rem;
-        }
-        h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-        }
-        p {
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        a {
-            color: #1a1a1a;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(26, 26, 26, 0.15);
-            transition: border-color 0.2s;
-        }
-        a:hover {
-            border-bottom-color: #1a1a1a;
-        }
-        
-        /* Drop Cap */
-        .drop-cap::first-letter {
-            float: left;
-            font-size: 3.5rem;
-            line-height: 0.8;
-            font-weight: 700;
-            margin-right: 0.5rem;
-            color: #1a1a1a;
-        }
-        
-        /* Layout Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        /* Space System */
-        section {
-            padding: 4rem 0;
-        }
-        
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-        }
+
         .nav-logo {
-            font-size: 1.2rem;
             font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
             letter-spacing: -0.02em;
+            border-bottom: 2px solid var(--text-main);
+            padding-bottom: 0.5rem;
+            display: inline-block;
         }
-        .nav-links {
-            display: flex;
-            gap: 2rem;
+
+        .nav-menu ul {
             list-style: none;
         }
-        .nav-links a {
-            font-size: 0.9rem;
+
+        .nav-menu li {
+            margin-bottom: 1rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-secondary);
             font-weight: 500;
-            border-bottom: none;
-            transition: opacity 0.2s;
-        }
-        .nav-links a:hover {
-            opacity: 0.6;
-            border-bottom: none;
-        }
-        .hamburger-menu {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 5px;
-            background: none;
-            border: none;
-        }
-        .hamburger-menu span {
             display: block;
-            width: 24px;
-            height: 2px;
-            background-color: #1a1a1a;
-            transition: all 0.3s;
+            padding: 0.5rem 0;
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease;
         }
-        
-        /* Hero */
-        .hero {
-            padding: 6rem 0 4rem;
-            text-align: center;
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--text-main);
+            border-left-color: var(--text-main);
         }
-        .hero p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 700px;
+
+        /* Main Content Area */
+        .main-content {
+            padding: 3rem 2rem;
+            max-width: 1400px;
             margin: 0 auto;
         }
-        .hero .subhead {
-            font-size: 1rem;
+
+        /* Typography & Components */
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.2;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            letter-spacing: -0.03em;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            border-bottom: 1px solid var(--border-strong);
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .meta-info {
+            font-family: var(--mono-stack);
+            font-size: 0.875rem;
             color: #888;
-            margin-top: 1rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-        }
-        
-        /* Card Grid */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.04);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        }
-        .card h3 {
-            margin-bottom: 0.5rem;
-        }
-        .card .tag {
+            border: 1px solid var(--border-strong);
+            padding: 1rem;
             display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: #888;
-            margin-bottom: 0.75rem;
+            margin-bottom: 2rem;
+            background: var(--bg-body);
         }
-        .card p {
-            font-size: 0.95rem;
-            color: #555;
-        }
-        
-        /* FAQ */
-        .faq-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .faq-item {
-            border-bottom: 1px solid #e5e2dd;
-            padding: 1.5rem 0;
-        }
-        .faq-item:last-child {
-            border-bottom: none;
-        }
-        .faq-question {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .faq-answer {
-            font-size: 0.95rem;
-            color: #555;
-            line-height: 1.7;
-        }
-        
-        /* Intro Section */
-        .intro-text {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        /* Tel link */
-        .tel-link {
-            font-weight: 600;
-            border-bottom: 1px solid rgba(26, 26, 26, 0.2);
-        }
-        .tel-link:hover {
-            border-bottom-color: #1a1a1a;
-        }
-        
-        /* Footer */
-        footer {
-            padding: 3rem 0;
-            text-align: center;
-            color: #888;
-            font-size: 0.85rem;
-            border-top: 1px solid #e5e2dd;
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
             margin-top: 2rem;
         }
-        
-        /* Responsive 768 */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.5rem;
-            }
-            .container {
-                padding: 0 1.25rem;
-            }
-            section {
-                padding: 2.5rem 0;
-            }
-            .hero {
-                padding: 4rem 0 2.5rem;
-            }
-            .hero p {
-                font-size: 1rem;
-            }
-            .card-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-            .card {
-                padding: 1.5rem;
-            }
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #faf8f5;
-                flex-direction: column;
-                padding: 1rem 2rem;
-                gap: 1rem;
-                border-bottom: 1px solid #e5e2dd;
-                z-index: 100;
-            }
-            .nav-links.active {
-                display: flex;
-            }
-            .hamburger-menu {
-                display: flex;
-            }
-            .intro-text {
-                font-size: 1rem;
-            }
+
+        @media (max-width: 900px) {
+            .app-grid { grid-template-columns: 1fr; }
+            .nav-sidebar { height: auto; position: relative; border-right: none; border-bottom: 1px solid var(--border-strong); padding: 1.5rem; }
+            .info-grid { grid-template-columns: 1fr; }
         }
     </style>
+  <meta property="og:url" content="https://airport-review-zone.mapo-room-guide.xyz/about.html">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-logo">공항 클럽 모음</div>
-        <button class="hamburger-menu" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('active')">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="/">홈</a></li>
-            <li><a href="/info">정보</a></li>
-            <li><a href="/clubs">클럽</a></li>
-            <li><a href="/guide">가이드</a></li>
-        </ul>
+<div class="app-grid">
+    <!-- Navigation Sidebar -->
+    <nav class="nav-sidebar">
+        <a href="#" class="nav-logo">MAPO ROOM GUIDE</a>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">프레스 리스팅</a></li>
+                <li><a href="#" class="active">정보</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">접근 및 문의</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <p class="subhead">Airport Club Info</p>
-            <h1>공항 클럽,<br>진짜 정보만 모았어</h1>
-            <p class="drop-cap">솔직히 말해서, 공항 클럽 모음 찾아보면 정보가 너무 많잖아? 근데 막상 내가 필요한 건 뭘까? 입장은 어떻게 하고, 얼마나 있어야 본전이고, 어떤 라운지가 진짜 괜찮은지. 내가 직접 경험하고 주변 여행자들에게 들은 꿀팁들만 모아봤어. 너한테 딱 맞는 공항 클럽 정보, 지금부터 알려줄게.</p>
-        </div>
-    </section>
-
-    <!-- Main Content: Info Cards -->
-    <section>
-        <div class="container">
-            <h2>알면 알수록 쓸모 있는 공항 클럽 정보</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <span class="tag">입장 조건</span>
-                    <h3>누구나 들어갈 수 있을까?</h3>
-                    <p>대부분의 공항 클럽은 비즈니스/퍼스트 클래스 티켓 소지자, 특정 신용카드 회원, 또는 멤버십 가입자에게 열려 있어. 근데 요즘은 PP카드나 라운지키 같은 서비스로 일반 여행자도 충분히 즐길 수 있어. 내 경험상, PP카드 하나면 인천부터 나리타까지 커버 가능하더라.</p>
-                </div>
-                <div class="card">
-                    <span class="tag">운영 시간</span>
-                    <h3>새벽에도 열려?</h3>
-                    <p>공항 클럽 운영 시간은 천차만별이야. 주요 허브 공항의 라운지는 보통 오전 6시부터 밤 10시까지 운영하는데, 간혹 24시간 오픈하는 곳도 있어. 인천공항의 경우 스카이허브 라운지가 24시간 운영해서 새벽 출발에도 완전 좋아. 다만, 새벽엔 음식이 좀 제한적일 수 있다는 건 감안해야 해.</p>
-                </div>
-                <div class="card">
-                    <span class="tag">꿀팁</span>
-                    <h3>본전 뽑는 스마트한 이용법</h3>
-                    <p>솔직히 공항 클럽에서 제일 중요한 건 음식이랑 샤워 시설이야. 비행기 타기 전에 따뜻한 샤워하고, 간단하게 한 끼 해결하면 공항 밥값 아끼는 건 물론이고 피로도 확 풀려. 내 루틴은 도착하자마자 샤워부터 하고, 그다음에 맥주 한잔하면서 충전하는 거. 완전 강추야.</p>
-                </div>
-                <div class="card">
-                    <span class="tag">히든 스팟</span>
-                    <h3>사람 없는 라운지 찾는 법</h3>
-                    <p>대형 공항의 메인 라운지는 항상 북적이기 마련이야. 근데 터미널 끝자락이나 환승 구역에 위치한 작은 라운지들은 의외로 한적하고 조용해. 예를 들어, 싱가포르 창이공항의 T3 환승 라운지는 사람도 적고 뷰도 끝내줘. 내가 발견한 히든 스팟인데, 여기서 시간 보내면 진짜 힐링된다.</p>
-                </div>
-                <div class="card">
-                    <span class="tag">비용</span>
-                    <h3>돈 아끼는 멤버십 전략</h3>
-                    <p>연간 멤버십이 부담스럽다면, 일일 이용권을 고려해봐. 보통 30~50달러 정도면 하루 종일 라운지를 쓸 수 있어. 그리고 신용카드 혜택을 잘 활용하면 무료로 입장 가능한 경우도 많아. 내가 쓰는 카드는 연회비 대비 라운지 혜택이 엄청나서, 1년에 3번만 가도 본전 뽑아.</p>
-                </div>
-                <div class="card">
-                    <span class="tag">매너</span>
-                    <h3>라운지에서 하면 안 되는 것</h3>
-                    <p>라운지는 공유 공간이라는 걸 꼭 기억해야 해. 너무 큰 소리로 통화하거나, 자리 오래 차지하는 건 별로야. 그리고 음식은 적당히 가져와. 나도 예전에 너무 많이 퍼와서 좀 민망했던 적이 있어. 서로 배려하면 모두가 편하게 즐길 수 있으니까, 기본적인 에티켓만 지키자.</p>
-                </div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <header>
+            <h1>공항 클럽 모음 — 정보</h1>
+            <div class="meta-info">
+                지역: 공항 | 업종: 클럽 | 메인 KW: 공항 클럽 모음<br>
+                페이지 목적: 상세 정보 + 지역 시그널 | CONCEPT: Swiss Minimal
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- FAQ Section -->
-    <section>
-        <div class="container">
-            <h2>자주 묻는 질문</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">공항 클럽 모음에 나오는 라운지는 모두 유료인가요? <span>▼</span></div>
-                    <div class="faq-answer">꼭 그렇진 않아. 많은 라운지가 신용카드 혜택이나 제휴 프로그램을 통해 무료로 입장 가능해. 예를 들어, 특정 프리미엄 카드를 소지하면 연간 몇 회 무료로 이용할 수 있는 경우가 많아. 공항 클럽 모음 사이트에서 각 라운지의 입장 조건을 꼭 확인해봐.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">환승 시간이 2시간인데 라운지 갈 시간이 될까요?<span>▼</span></div>
-                    <div class="faq-answer">충분히 가능해! 보통 라운지는 출발 게이트 근처에 있어서 접근성이 좋아. 2시간이면 30분 정도 라운지에서 쉬면서 간단히 먹고 마실 수 있어. 다만, 보안 수속이나 게이트 이동 시간을 고려해서 최소 1시간 전에는 나오는 게 좋아. 내 경험상 2시간 환승이면 라운지에서 맥주 한잔하고 샤워도 가능하더라.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">아이와 함께 라운지를
+        <section id="intro-data" class="content-block">
+            <h2>01. 데이터 기반의 공간 정의</h2>
+            <p>
+                본 섹션은 공항 터미널 내부에 위치한 비즈니스 휴게 공간과 클럽 형태의 레저 시설을 정의하기 위한 핵심 데이터를 제공합니다. 단순한 '바'나 '휴게실'을 넘어, 항공 여행의 흐름 (Flight Flow) 과 밀접하게 연동된 인프라로서 운영되는 공간을 가리킵니다. 이 데이터는 공항 내에서의 체류 시간 최소화 및 비즈니스 효율성 극대화를 위해 설계된 공간의 물리적, 서비스적 기준을 담고 있습니다.
+            </p>
+            <p>
+                '정보' 페이지가 제공하는 데이터는 정적인 평면도가 아닌, 동적인 운영 환경을 반영한 것입니다. 예를 들어, 출국 전 대기 구역과 도착 후 휴식 구역의 분위기는 완전히 다르며, 이를 구분하는 정보적 기준이 필요합니다. 또한, 공항이라는 특수 환경에서 발생하는 소음, 혼잡도, 그리고 보안 검색 (Security Check) 통과 여부에 따른 접근성 데이터는 이용객이 공간 선택 시 반드시 고려해야 할 변수입니다.
+            </p>
+            <p>
+                궁극적으로 본 정보는 방문자가 '어떤 목적'으로 공항에 왔는지 (출장, 이직, 휴가, 급한 회식) 에 따라 최적의 공간을 매핑하는 기준이 됩니다. 데이터는 단순한 숫자를 넘어, 이용 경험의 질을 보장하기 위한 체크리스트로 작용합니다. 예를 들어, 비즈니스 미팅 공간은 '소음 지수'와 '조명 밝기'에 대한 엄격한 규정을 따르며, 이 수치는 정보 섹션에서 확인 가능합니다.
+            </p>
+        </section>
+
+        <section id="capacity-density" class="content-block">
+            <h2>02. 용량 및 밀도 분석 (Capacity & Density)</h2>
+            <p>
+                공항 내 클럽 공간은 제한된 면적에 최대의 효율을 내려는 특성을 가집니다. 따라서 '용량'을 단순히 좌석 수로만 정의하기보다는, 단위 면적당 수용 인원 (Density) 과 이동 동선 (Circulation) 을 분석해야 합니다. 예를 들어, 50 평 규모의 공간이라도 좌식이 100%, 스터이팅이 10% 인 경우와 반대로 30% 스터이팅이 포함된 경우의 실제 수용 능력은 크게 달라집니다.
+            </p>
+            <p>
+                밀도 분석을 통해 쾌적함을 판단할 수 있습니다. 일반적인 비즈니스 휴게 공간은 평방미터당 2~3 인의 앉는 면적을 확보하는 것이 표준으로 권장됩니다. 하지만 클럽 형태의 공간은 음악 소음과 대화 소음을 고려하여, 실제 체감 밀도는 물리적 밀도의 70% 수준으로 설정되는 경우가 많습니다. 이는 공간 내에서의 프라이버시 보호와 음향 환경이 중요한 변수임을 의미합니다.
+            </p>
+        </section>
+
+        <section id="operational-standards" class="content-block">
+            <h2>03. 운영 기준 및 시간대 (Operational Standards)</h2>
+            <p>
+                공항 내 시설물의 운영 시간은 일반적인 도시 내 클럽과 다릅니다. 항공편 스케줄 (Flight Schedule) 에 맞춰 24 시간 운영을 하거나, 특정 피크 타임 (Peak Time) 에만 문을 여는 '스태치 운영'이 존재합니다. 정보 섹션에서 반드시 확인해야 할 것은 '실제 영업 마감 시간'이 아닌 '보안 폐문 시간'입니다. 보안 검색대 근처에 위치한 공간은 항공편 출발 시간을 기준으로 30 분 전까지 운영을 종료하는 경우가 많습니다.
+            </p>
+            <p>
+                또한, 직원 교대 (Shift Change) 시간이 발생할 경우 서비스 질의 변화가 있을 수 있습니다. 예를 들어, 출장객이 많이 드는 밤 12 시와 새벽 6 시 사이에는 인력 운영 방식이 바뀔 수 있습니다. 이러한 '상황별' 운영 패턴은 예약 시 고려해야 할 중요한 요소입니다. 특히 비즈니스 미팅을 위해 방문할 경우, 담당자의 근무 시간대 (Shift) 와 겹치는 지점을 확인하는 것이 필수적입니다.
+            </p>
+        </section>
+
+        <section id="pricing-tiering" class="content-block">
+            <h2>04. 가격 체계 및 티어링 (Pricing Tiering)</h2>
+            <p>
+                공항 클럽의 가격 체계는 단순한 음료나 음료가 아닌, '편의성'에 대한 프리미엄이 포함되어 있습니다. 이는 위치가 얼마나 좋은지, 예약 시스템이 어떻게 작동하는지에 따라 결정됩니다. 예를 들어, VIP 라운지를 위한 프라이빗 룸은 시간당 고정 요금제가 적용되는 반면, 일반 바 카운터는 음료 단위로 청구되는 구조입니다.
+            </p>
+            <p>
+                가격 정보는 또한 '서비스 등급'과 직결됩니다. 비즈니스 클라스 (Business Class) 의 좌석은 일반 어퍼클래스와 다른 가격대를 형성합니다. 따라서 방문 전, 본 섹션의 정보에서 제공하는 가격 기준 (Price Reference) 을 통해 예상 비용을 산출할 수 있습니다. 특히 국제선 터미널과 국내선 터미널 간에는 물가 수준에 따라 차이가 발생할 수 있으므로 지역별 시그널을 고려한 비교 분석이 필요합니다.
+            </p>
+        </section>
+
+        <section id="dress-code-atmosphere" class="content-block">
+            <h2>05. 드레스 코드 및 분위기 (Dress Code & Atmosphere)</h2>
+            <p>
+                공항은 비즈니스와 레저가 공존하는 공간입니다. 따라서 클럽 형태의 공간이라도 '비즈니스 캐주얼'에서부터 '포멀 웨어'까지 다양한 드레스 코드가 적용될 수 있습니다. 정보 섹션에서는 방문 목적에 따른 의상 가이드를 제공합니다. 예를 들어, 출장 중 급한 회식을 위해 방문할 경우 비즈니스 정장이 필수인 반면, 휴가 기간의 이직을 위해 방문할 경우 캐주얼한 옷차림도 허용되는 경우가 많습니다.
+            </p>
+            <p>
+                분위기 (Atmosphere) 는 조명과 소음 수준, 그리고 배경 음악의 볼륨으로 결정됩니다. 공항 내 공간은 보안 검색 후의 긴장감을 풀어주는 'Relax Zone' 역할을 하기도 하지만, 중요한 전화 통화를 위한 'Focus Zone' 역할도 합니다. 본 섹션의 정보는 이러한 분위기를 정량적으로 설명합니다. 예를 들어, 백색조 (White Light) 를 사용한 공간은 업무에 집중하기 좋으며, 따뜻한 색온도 조명은 휴식과 대화에 적합합니다.
+            </p>
+        </section>
+    </main>
+</div>
+
 </body>
 </html>
