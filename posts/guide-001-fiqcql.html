@@ -31,7 +31,7 @@
       <p>아, 진짜... 그 좁은 통로와 적 배치의 차이는 파일 구조를 뜯어봐야 해. 브로드가 처음엔 "데모판이 더 낫다"고 생각할지라도, 실제 메모리 덱스트를 보면 출시본의 수정 흔적이 명확하다. 내가 당시 에뮬레이터 설정을 잘못 걸어 3 일 만에 판매 중단된 버전을 발견한 건 그 때문이다.</p>
 <h2>버전 간 데이터 비교 기준</h2>
 <p>우선 <code>0.1.0</code> 데모와 <code>0.9.12</code> 최종 빌드를 대조해야 해. 특정 구역의 <code>enm_placement.dat</code> 파일을 추출해볼 때, 적 생성 좌표가 3% 이상 벗어나면 버그일 수 있다. 특히 초기 테스트용 맵은 <code>airport_hub_04</code> 폴더에 숨어있던 건데, 이게 바로 우리가 말하는 <strong>공항 클럽 모음</strong>과 같은 개념이라 생각하면 오산하지. 개발자가 내부적으로 붙인 임시 명칭을 그대로 따라가는 건 무모한 시도니까.</p>
-<p><IMAGE placement="hero" alt="다크 소울 1 데모 버전과 출시본의 맵 구조 비교"><br>dark souls 1, demo version:(1.3), map structure comparison, level design, retro emulation, game development history, hidden content, enemy placement, dark souls 1 boss, firelink shrine, undead burg, file explorer, binary code, source engine</p>
+<p><br>dark souls 1, demo version:(1.3), map structure comparison, level design, retro emulation, game development history, hidden content, enemy placement, dark souls 1 boss, firelink shrine, undead burg, file explorer, binary code, source engine</p>
 <h2>실패 방지와 관찰 포인트</h2>
 <p>단순히 그래픽만 보면 안 된다. 패치 노트를 무시한 채 에뮬레이터로 돌릴 경우 프레임 드롭이 발생하곤 한다. 60FPS 설정을 유지하려면 <code>config.ini</code> 파일의 <code>render_distance</code> 값을 256 단위로 조정해야 해. 내가 겪은 실수 중 하나는 데모판의 아트워크를 출시본에 적용해서 비교한 건데, 텍스트 렌더링 엔진 버전이 달라서 글자가 깨지기도 한다. 특히 <code>font_size</code> 파라미터가 고정되어 있지 않은 경우야, 사용자가 키보드를 누르는 빈도까지 영향을 받을 수 있다.</p>
 <h2>결론</h2>
